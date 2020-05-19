@@ -10,4 +10,6 @@ class Receita(models.Model):
     rendimento = models.TextField(max_length = 100)
     categoria = models.CharField(max_length = 100)
     data_receita = models.DateTimeField(default = datetime.now, blank = True)
+    def __str__(self): #pra mostrar o nome no bd
+        return self.nome_receita
 
